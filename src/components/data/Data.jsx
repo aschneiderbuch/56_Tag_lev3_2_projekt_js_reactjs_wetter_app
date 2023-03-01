@@ -10,7 +10,7 @@ const dataBerlin = {
         {
             "id": 800,
             "main": "Clear",
-            "description": "clear sky",         /* // ! das  */
+            "description": "clear sky dddd",         /* // ! das  */
             "icon": "01d"
         }
     ],
