@@ -45,4 +45,4 @@ const dataBerlin = {
     "cod": 200
 }
 
-export default dataBerlin
+export default dataBerlin;
