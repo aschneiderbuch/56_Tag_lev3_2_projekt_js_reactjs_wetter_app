@@ -18,10 +18,20 @@ const Home = () => {
 
     /***********************************************************************************************
      * 
-     *          Fetch 
-     *          https://api.openweathermap.org/data/2.5/weather?lat=52.52406171856656&lon=13.39998492042157&appid=d0ca0011f6859dd04d0de83562d4b663
+     *       Fetch 
+     *          Länge und Breitengrad 
+     *              https://api.openweathermap.org/data/2.5/weather?lat=52.52406171856656&lon=13.39998492042157&appid={apiKey}
+     * 
+     *          Wetter Icon abrufen   - Info  https://openweathermap.org/weather-conditions#How-to-get-icon-URL
+     *              URL is http://openweathermap.org/img/wn/{ iconCode }d@2x.png     --> weather[0].icon
+     * 
+     * 
+     *          Suche nach Stadt direkt q
+     *              https://api.openweathermap.org/data/2.5/weather?q=London&appid={apiKey}
      * 
      ************************************************************************************************/
+
+    const apiKey = "d0ca0011f6859dd04d0de83562d4b663"
 
     const [getWeather, setWeather] = useState(dataBerlin);
 
@@ -29,7 +39,7 @@ const Home = () => {
 
 
       useEffect(() => {
-            fetch(`https://api.openweathermap.org/data/2.5/weather?${getClickValue}&appid=d0ca0011f6859dd04d0de83562d4b663`)
+            fetch(`https://api.openweathermap.org/data/2.5/weather?${getClickValue}&appid=${apiKey}`)
                 .then(response => response.json())
                 .then(data => {
                     setWeather(data);
@@ -41,6 +51,13 @@ const Home = () => {
     
         }, [getClickValue])
 
+
+
+/***********************************************************************************************
+ * 
+ *      async Fetch
+ * 
+ ************************************************************************************************/
 
 /*    useEffect(() => {
         const fetchData = async () => {
@@ -58,19 +75,41 @@ const Home = () => {
         fetchData();
     }, [getClickValue]);  */
 
-    console.log("getWeather von fetch: ");
-console.log(getWeather)
+    
+
+
+
+
+    /***********************************************************************************************
+     * 
+     *     If else für 2tes Icon ohne Wetter Icon Api-Link
+     * 
+     ************************************************************************************************/
 
 let wetterSymbol = "";
-if (String(getWeather.weather[0].description) == "clear sky") {
+if (String(getWeather.weather[0].description) === "clear sky") {
      wetterSymbol = "☀️"
 }
-else if (String(getWeather.weather[0].description) == "fog") {
+else if (String(getWeather.weather[0].description) === "fog") {
 wetterSymbol = "😶‍🌫️"
 }
 else {
     wetterSymbol = "⛈️ 🤣"
 }
+
+
+
+/***********************************************************************************************
+ * 
+ *      Stadt Suche Input und Button
+ * 
+ ************************************************************************************************/
+const [getStadt, setStadt] = useState("");
+
+function suchFunktion (){
+    setClickValue(`q=${getStadt}`);
+}
+
 
     return (
 
@@ -85,6 +124,10 @@ else {
                   <button onClick={(e) => setClickValue(e.target.value)} value={`lat=52.52406171856656&lon=13.39998492042157`} >Berlin</button>
                     <button onClick={(e) => setClickValue(e.target.value)} value={`lat=53.55114749651508&lon=9.982747435874535`} >Hamburg</button> 
                 </section>
+                <section className="sec_StadtSuche">
+                    <input onChange={(e) => setStadt(e.target.value)} type="text" name="stadtSuche" id="stadtSuche" />
+                    <button onClick={() => suchFunktion() }>Suche Stadt</button>
+                </section>
 
 
                 <section className="sec_Text">
@@ -92,6 +135,7 @@ else {
                     <article>
                          <h2>Clouds in Stadt:  {getWeather.weather[0].description}   </h2>   
                         <p>{wetterSymbol}</p>
+                        <h5>Icon von Api: <span> <img src={`http://openweathermap.org/img/wn/${getWeather.weather[0].icon}@2x.png`} alt="" /> </span></h5>
                     </article>
 
                     <h3>Temperatur <span> {((getWeather.main.temp) / 32).toFixed(2)} </span> Grad</h3>  

@@ -15,6 +15,7 @@
 .sec_Button {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .sec_Button button {
   padding: 5px 10px;
@@ -27,15 +28,20 @@
 
 .sec_Text article {
   background-color: rgba(167, 227, 170, 0.519);
-  height: 5rem;
 }
 .sec_Text article p {
   font-size: 2rem;
+}
+.sec_Text article h5 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .sec_Text h3 {
   display: flex;
   justify-content: space-around;
   font-size: 1.2rem;
+  flex-wrap: wrap;
 }
 .sec_Text h3 span {
   color: red;
@@ -44,7 +50,33 @@
   display: flex;
   justify-content: space-around;
   font-size: 1.1rem;
+  flex-wrap: wrap;
 }
 .sec_Text h4 span {
   color: purple;
+}
+
+.sec_StadtSuche {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.sec_StadtSuche input {
+  background-color: white;
+}
+.sec_StadtSuche input:focus {
+  background-color: yellow;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+.sec_StadtSuche button {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.sec_StadtSuche button:hover {
+  background-color: rgb(54, 198, 54);
+  color: white;
+  scale: 1.2;
 }/*# sourceMappingURL=Home.css.map */

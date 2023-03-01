@@ -11,7 +11,7 @@ const dataBerlin = {
             "id": 800,
             "main": "Clear",
             "description": "clear sky dddd",         /* // ! das  */
-            "icon": "01d"
+            "icon": "01d"                           /* // ! das fürs img src */
         }
     ],
     "base": "stations",
