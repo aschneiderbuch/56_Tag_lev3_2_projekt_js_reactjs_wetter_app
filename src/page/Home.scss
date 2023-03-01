@@ -1,0 +1,67 @@
+.sec_Home {
+    border: 2px solid gray;
+    border-radius: 20px;
+
+    width: 50vw;
+
+    max-width: 500px;
+    margin: auto;
+    padding: 2rem;
+
+    text-align: center;
+
+    h1 {
+        padding-bottom: 1rem;
+        color: blue;
+    }
+
+
+
+}
+
+.sec_Button {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        padding: 5px 10px;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: green;
+            color: white;
+        }
+    }
+}
+
+.sec_Text {
+
+    article {
+        background-color: rgba(167, 227, 170, 0.519);
+        height: 5rem;
+
+        p{
+            font-size: 2rem;
+        }
+    }
+
+    h3 {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.2rem;
+
+        span {
+            color: red;
+        }
+    }
+
+    h4 {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.1rem;
+
+        span {
+            color: purple;
+        }
+    }
+}

@@ -5,10 +5,15 @@ import { useState } from "react";
 import { useEffect } from "react";
 import dataBerlin from "../components/data/Data";
 
-//import dataBerlin from "../components/data/Data.jsx";
-//console.log("data Berlin: ");
-//console.log(dataBerlin);
-// sfc
+// import css
+import "./Home.scss";
+
+
+
+
+
+
+
 const Home = () => {
 
     /***********************************************************************************************
@@ -56,32 +61,41 @@ const Home = () => {
     console.log("getWeather von fetch: ");
 console.log(getWeather)
 
-
+let wetterSymbol = "";
+if (String(getWeather.weather[0].description) == "clear sky") {
+     wetterSymbol = "☀️"
+}
+else if (String(getWeather.weather[0].description) == "fog") {
+wetterSymbol = "😶‍🌫️"
+}
+else {
+    wetterSymbol = "⛈️ 🤣"
+}
 
     return (
 
         <main>
-             <section>
+             <section className="sec_Home">
 
-                <h1>Home</h1>
+                <h1>Wettermonitor</h1>
 
-                <section>
-                    <button>Düsseldorf</button>
-                    <button>Kön</button>
+                <section className="sec_Button">
+                    <button onClick={(e) => setClickValue(e.target.value)} value={`lat=51.22606576271359&lon=6.770352549259979`} >Düsseldorf</button>
+                    <button onClick={(e) => setClickValue(e.target.value)} value={`lat=50.94031485716163&lon=6.9432835583996715`}>Kön</button>
                   <button onClick={(e) => setClickValue(e.target.value)} value={`lat=52.52406171856656&lon=13.39998492042157`} >Berlin</button>
                     <button onClick={(e) => setClickValue(e.target.value)} value={`lat=53.55114749651508&lon=9.982747435874535`} >Hamburg</button> 
                 </section>
 
 
-                <section>
+                <section className="sec_Text">
 <br />
                     <article>
-                         <h2>Clouds in Stadt {getWeather.weather[0].description}</h2>   
-                        <img src="" alt="Sonne Wolken Regen usw" />
+                         <h2>Clouds in Stadt:  {getWeather.weather[0].description}   </h2>   
+                        <p>{wetterSymbol}</p>
                     </article>
 
-                    <h3>Temperatur {((getWeather.main.temp) / 32).toFixed(2)} Grad</h3>  
-                    <h4>Windgeschwindigkeit {((getWeather.wind.speed) * 1.60934).toFixed(2)} km/h </h4>   
+                    <h3>Temperatur <span> {((getWeather.main.temp) / 32).toFixed(2)} </span> Grad</h3>  
+                    <h4>Windgeschwindigkeit <span> {((getWeather.wind.speed) * 1.60934).toFixed(2)} </span> km/h </h4>   
                 </section>
 
             </section> 

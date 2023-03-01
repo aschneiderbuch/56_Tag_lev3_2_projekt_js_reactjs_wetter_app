@@ -1,0 +1,50 @@
+.sec_Home {
+  border: 2px solid gray;
+  border-radius: 20px;
+  width: 50vw;
+  max-width: 500px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+.sec_Home h1 {
+  padding-bottom: 1rem;
+  color: blue;
+}
+
+.sec_Button {
+  display: flex;
+  justify-content: space-between;
+}
+.sec_Button button {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.sec_Button button:hover {
+  background-color: green;
+  color: white;
+}
+
+.sec_Text article {
+  background-color: rgba(167, 227, 170, 0.519);
+  height: 5rem;
+}
+.sec_Text article p {
+  font-size: 2rem;
+}
+.sec_Text h3 {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2rem;
+}
+.sec_Text h3 span {
+  color: red;
+}
+.sec_Text h4 {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.1rem;
+}
+.sec_Text h4 span {
+  color: purple;
+}/*# sourceMappingURL=Home.css.map */
