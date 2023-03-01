@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/aschneiderbuch/56_Tag_lev3_2_projekt_js_reactjs_wetter_app/static/css/main.ba4076d5.css",
-    "main.js": "/aschneiderbuch/56_Tag_lev3_2_projekt_js_reactjs_wetter_app/static/js/main.1e411bc5.js",
-    "static/js/787.dc84f290.chunk.js": "/aschneiderbuch/56_Tag_lev3_2_projekt_js_reactjs_wetter_app/static/js/787.dc84f290.chunk.js",
-    "index.html": "/aschneiderbuch/56_Tag_lev3_2_projekt_js_reactjs_wetter_app/index.html",
-    "main.ba4076d5.css.map": "/aschneiderbuch/56_Tag_lev3_2_projekt_js_reactjs_wetter_app/static/css/main.ba4076d5.css.map",
-    "main.1e411bc5.js.map": "/aschneiderbuch/56_Tag_lev3_2_projekt_js_reactjs_wetter_app/static/js/main.1e411bc5.js.map",
-    "787.dc84f290.chunk.js.map": "/aschneiderbuch/56_Tag_lev3_2_projekt_js_reactjs_wetter_app/static/js/787.dc84f290.chunk.js.map"
+    "main.css": "/56_Tag_lev3_2_projekt_js_reactjs_wetter_app/static/css/main.ba4076d5.css",
+    "main.js": "/56_Tag_lev3_2_projekt_js_reactjs_wetter_app/static/js/main.9a7b6aec.js",
+    "static/js/787.dc84f290.chunk.js": "/56_Tag_lev3_2_projekt_js_reactjs_wetter_app/static/js/787.dc84f290.chunk.js",
+    "index.html": "/56_Tag_lev3_2_projekt_js_reactjs_wetter_app/index.html",
+    "main.ba4076d5.css.map": "/56_Tag_lev3_2_projekt_js_reactjs_wetter_app/static/css/main.ba4076d5.css.map",
+    "main.9a7b6aec.js.map": "/56_Tag_lev3_2_projekt_js_reactjs_wetter_app/static/js/main.9a7b6aec.js.map",
+    "787.dc84f290.chunk.js.map": "/56_Tag_lev3_2_projekt_js_reactjs_wetter_app/static/js/787.dc84f290.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ba4076d5.css",
-    "static/js/main.1e411bc5.js"
+    "static/js/main.9a7b6aec.js"
   ]
 }
